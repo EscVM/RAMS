@@ -210,4 +210,4 @@ def select_T_images(X, masks, T=9, thr=0.85, remove_bad=True):
         X_selected.append(clear_imgset[...,sorted_clearances_indexes[:T]])   #take T images        
         masks_selected.append(clear_m[...,sorted_clearances_indexes[:T]])    #take T masks  
             
-    return np.array(X_selected),np.array(masks_selected),remove_indexes
+    return np.array(X_selected), remove_indexes
