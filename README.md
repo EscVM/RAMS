@@ -29,17 +29,34 @@ Python3 and Tensorflow 2.x are required required and should be installed on the 
    ```
    pip3 install -r requirements.txt
    ```
-# 2.0 Pre-Processing Notebook
+# 2.0 Playground Notebooks
+We provide with this repository three different notebooks. The first one can be used to pre-process the Proba-V dataset and experiment with your own solutions. The other two provdies all necessary code to train, modify and test RAMS, the residual attention multi-image super-resolution network expalined in [this]()paper.
+
+## 2.1 Pre-processing notebook
 Use the [pre-processing](https://github.com/EscVM/RAMS/blob/master/preprocessing_dataset.ipynb) notebook to process the Proba-V [original dataset](https://kelvins.esa.int/proba-v-super-resolution/data/) and obtain the training/validation/testing arrays ready to be used.
 
 **NB**: Testing is the original ESA testing dataset without ground truths. Validation is the portion of the dataset we've used to test our solution and all major multi-image super-resolution methodologies. However, you can still use the testing dataset and the [post-mortem](https://kelvins.esa.int/proba-v-super-resolution-post-mortem/home/) ESA website to evaluate your technique.
 
-# 3.0 Training Notebook
+## 2.2 Training notebook
 Use the [training notebook](https://github.com/EscVM/RAMS/blob/master/train_RAMS_network.ipynb) to re-train the original or modified version of the RAMS architecture.
 
-# 4.0 Testing Notebook
+## 2.3 Testing notebook
 Use the [testing notebook](https://github.com/EscVM/RAMS/blob/master/test_RAMS_network.ipynb) to test RAMS model, with pre-trained or re-trained weights, over the validation set. Moreover, you can use the final chapter of the notebook to make predictions with the original ESA testing set, create a zip file and submit it to the [post-mortem](https://kelvins.esa.int/proba-v-super-resolution-post-mortem/home/) website.
 The following table gives you a reference with results achieved by the RAMS architecture and all literature major solutions over the validation set.
 <p align="center">
-<img src="media/probav_results_summary.png" width="410" height="245">
+<img src="media/probav_results_summary.png" width="450px">
 </p>
+
+# Citation
+Use this bibtex if you want to cite this repository:
+
+```
+@misc{RAMS,
+  title={Multi-Image Super-Resolution Task},
+  author={Vittorio, Francesco},
+  year={2020},
+  publisher={Github},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/EscVM/RAMS}},
+}
+```
