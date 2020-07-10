@@ -49,10 +49,10 @@ The following table gives you a reference with results achieved by the RAMS arch
 </p>
 
 # Citation
-Use this bibtex if you want to cite this repository:
+Use this bibtex if you enjoyed this repository and you want to cite this repository:
 
 ```
-@article{salvetti2020muti,
+@article{salvetti2020multi,
   title={Multi-Image Super Resolution of Remotely Sensed Images Using Residual Attention Deep Neural Networks},
   author={Salvetti, Francesco and Mazzia, Vittorio and Khaliq, Aleem and Chiaberge, Marcello},
   journal={Remote Sensing},
