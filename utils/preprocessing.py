@@ -211,3 +211,81 @@ def select_T_images(X, masks, T=9, thr=0.85, remove_bad=True):
         masks_selected.append(clear_m[...,sorted_clearances_indexes[:T]])    #take T masks  
             
     return np.array(X_selected), remove_indexes
+
+def sub_images(X,d,s,n): 
+        """
+    Generate patches util
+    """
+    l = n**2
+    ch = X.shape[-1]
+    k = np.empty((l,d,d,ch))
+    
+    for i in range(n):
+        for j in range(n):
+            sub = X[i*s:i*s+d,j*s:j*s+d]
+            k[n*i+j] = sub
+    return k
+
+def gen_sub(array,d,s,verbose=True):
+    """
+    Generate patches 
+    
+    Parameters
+    ----------
+    array: numpy array
+        tensor X with all scenes
+    d: int
+        dimension of the pathches
+    s: int
+        stride between pathces
+    verbose: bool
+        print output info
+    """
+    if len(array.shape) != 4: raise ValueError("Wrong array shape.")
+    
+    l = len(array)
+    d_o = array.shape[1]
+    ch = array.shape[-1]
+    d = int(d)
+    s = int(s)
+    
+    n = (d_o - d)/s + 1
+    if int(n) != n: raise ValueError("d, s and n should be integer values.")
+    
+    n = int(n)
+    
+    X_sub = np.empty((l*(n**2),d,d,ch))
+    with tqdm(total=l,desc="Creating sub images") if verbose else no_bar() as pbar:
+        for i,X in enumerate(array):    
+            sub = sub_images(X,d,s,n)
+            X_sub[i*n**2:(i+1)*n**2] = sub
+            if pbar:
+                pbar.update(1)
+    if verbose:
+        print(X_sub.shape)
+    return X_sub
+
+def bicubic(X, scale = 3):
+    """
+    Rescale with bicubic operation
+    
+    Parameters
+    ----------
+    X: numpy array
+        tensor X to upscale
+    scale: int
+        scale dimension
+    """
+    if len(X.shape) == 3:
+        X = np.expand_dims(X,axis=0)
+    if len(X.shape) != 4: raise ValueError("Wrong array shape.")
+    shape = [X.shape[0],X.shape[1]*scale,X.shape[2]*scale,X.shape[-1]]
+    
+    X_upscaled = np.empty(shape)
+    
+    for i,lr in enumerate(X):
+        sr_img = rescale(lr,scale=scale,order=3,mode='edge',
+                     anti_aliasing=False, multichannel=True, preserve_range=True) #bicubic
+        X_upscaled[i] = sr_img
+
+    return X_upscaled
