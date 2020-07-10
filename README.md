@@ -1,4 +1,5 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/wide-activation-for-efficient-and-accurate/multi-frame-super-resolution-on-proba-v)](https://paperswithcode.com/sota/multi-frame-super-resolution-on-proba-v?p=wide-activation-for-efficient-and-accurate) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-image-super-resolution-of-remotely/multi-frame-super-resolution-on-proba-v)](https://paperswithcode.com/sota/multi-frame-super-resolution-on-proba-v?p=multi-image-super-resolution-of-remotely)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <h1 align="center"> ~ Multi-Image Super-Resolution Task ~ </h1>
 
@@ -17,7 +18,7 @@ We created this repository for two primary reasons:
 </p>
 
 # 1.0 Getting Started with the Installation
-Python3 and Tensorflow 2.x are required required and should be installed on the host machine following the [official guide](https://www.tensorflow.org/install).
+Python3 and Tensorflow 2.x are required and should be installed on the host machine following the [official guide](https://www.tensorflow.org/install).
 
 
 1. Clone this repository
@@ -51,12 +52,13 @@ The following table gives you a reference with results achieved by the RAMS arch
 Use this bibtex if you want to cite this repository:
 
 ```
-@misc{RAMS,
-  title={Multi-Image Super-Resolution Task},
-  author={Vittorio, Francesco},
+@article{salvetti2020muti,
+  title={Multi-Image Super Resolution of Remotely Sensed Images Using Residual Attention Deep Neural Networks},
+  author={Salvetti, Francesco and Mazzia, Vittorio and Khaliq, Aleem and Chiaberge, Marcello},
+  journal={Remote Sensing},
+  volume={12},
+  number={14},
   year={2020},
-  publisher={Github},
-  journal={GitHub repository},
-  howpublished={\url{https://github.com/EscVM/RAMS}},
+  publisher={Multidisciplinary Digital Publishing Institute}
 }
 ```
