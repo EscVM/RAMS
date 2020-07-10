@@ -31,7 +31,7 @@ Python3 and Tensorflow 2.x are required and should be installed on the host mach
    pip3 install -r requirements.txt
    ```
 # 2.0 Playground Notebooks
-We provide with this repository three different notebooks. The first one can be used to pre-process the Proba-V dataset and experiment with your own solutions. The other two provdies all necessary code to train, modify and test RAMS, the residual attention multi-image super-resolution network expalined in [this]()paper.
+We provide with this repository three different notebooks. The first one can be used to pre-process the Proba-V dataset and experiment with your own solutions. The other two provdies all necessary code to train, modify and test RAMS, the residual attention multi-image super-resolution network expalined in [this](https://www.mdpi.com/2072-4292/12/14/2207) paper.
 
 ## 2.1 Pre-processing notebook
 Use the [pre-processing](https://github.com/EscVM/RAMS/blob/master/preprocessing_dataset.ipynb) notebook to process the Proba-V [original dataset](https://kelvins.esa.int/proba-v-super-resolution/data/) and obtain the training/validation/testing arrays ready to be used.
