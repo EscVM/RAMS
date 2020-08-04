@@ -2,6 +2,9 @@
 #
 # Authors: Vittorio | Francesco
 # Location: Turin, Biella, Ivrea
+#
+# This file was adapted from the work of Francisco Dorr - PROBA-V-3DWDSR (https://github.com/frandorr/PROBA-V-3DWDSR)
+
 """Some important functions for preprocessing the original probav-dataset"""
 import cv2
 import numpy as np
