@@ -2,6 +2,9 @@
 #
 # Authors: Vittorio | Francesco
 # Location: Turin, Biella, Ivrea
+#
+# This file is based on the work of Francisco Dorr - PROBA-V-3DWDSR (https://github.com/frandorr/PROBA-V-3DWDSR)
+
 """Training class and some functions for training RAMS"""
 import tensorflow as tf
 from tensorflow.keras.utils import Progbar
