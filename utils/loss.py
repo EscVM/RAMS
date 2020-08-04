@@ -2,6 +2,9 @@
 #
 # Authors: Vittorio | Francesco
 # Location: Turin, Biella, Ivrea
+#
+# This file is adapted from the work of Francisco Dorr - PROBA-V-3DWDSR (https://github.com/frandorr/PROBA-V-3DWDSR)
+
 """RAMS functions for training"""
 import tensorflow as tf
 
