@@ -213,7 +213,7 @@ def select_T_images(X, masks, T=9, thr=0.85, remove_bad=True):
     return np.array(X_selected), remove_indexes
 
 def sub_images(X,d,s,n): 
-        """
+    """
     Generate patches util
     """
     l = n**2
