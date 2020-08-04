@@ -2,6 +2,10 @@
 #
 # Authors: Vittorio | Francesco
 # Location: Turin, Biella, Ivrea
+#
+# This file is based on the work of Francisco Dorr - PROBA-V-3DWDSR (https://github.com/frandorr/PROBA-V-3DWDSR)
+
+
 """RAMS functions and building"""
 import numpy as np
 import tensorflow as tf
@@ -31,7 +35,7 @@ def conv2d_weightnorm(filters, kernel_size, padding='same', activation=None, **k
     return tfa.layers.WeightNormalization(layers.Conv2D(filters, kernel_size, padding=padding, activation=activation, **kwargs), data_init=False)
 
 def reflective_padding(name):
-    """reflectino padding on H and W dimension"""
+    """Reflecting padding on H and W dimension"""
     return layers.Lambda(lambda x: tf.pad(x, [[0,0],[1,1],[1,1],[0,0],[0,0]], mode='REFLECT', name=name))
 
 
