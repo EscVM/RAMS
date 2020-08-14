@@ -17,6 +17,9 @@ We created this repository for two primary reasons:
 <img src="media/misr_task.png" >
 </p>
 
+**N.B.**: This repository has been inspired by the work of [Francisco Dorr](https://github.com/frandorr/PROBA-V-3DWDSR). He effectively adapted the WDSR solution to the multi-image super-resolution task, beating for the first time the record of the official Proba-V challenge winners.
+Check it out [his](https://github.com/frandorr/PROBA-V-3DWDSR) alternative solution and let you inspired as well for new great and amazing ideas.
+
 # 1.0 Getting Started with the Installation
 Python3 and Tensorflow 2.x are required and should be installed on the host machine following the [official guide](https://www.tensorflow.org/install).
 
