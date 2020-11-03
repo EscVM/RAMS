@@ -52,7 +52,7 @@ The following table gives you a reference with results achieved by the RAMS arch
 </p>
 
 # Citation
-Use this bibtex if you enjoyed this repository and you want to cite this repository:
+Use this bibtex if you enjoyed this repository and you want to cite it:
 
 ```
 @article{salvetti2020multi,
