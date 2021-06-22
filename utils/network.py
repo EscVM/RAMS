@@ -129,7 +129,7 @@ def RAMS(scale, filters, kernel_size, channels, r, N):
     x = x + x_res
     
     # Temporal Reduction out: HxWxC
-    for i in range(0, np.floor_divide(channels,3)):
+    for i in range(0, np.floor((channels-1)/(kernel_size-1)-1)):
         x = reflective_padding(name="ref_padding_{}".format(i))(x)
         x = RFAB(x, filters, kernel_size, r)
         x = conv3d_weightnorm(filters, (3,3,3), padding='valid', activation='relu',
